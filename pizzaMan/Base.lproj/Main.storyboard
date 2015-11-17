@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="12G-iN-Bhc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tamaño-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="controladorTamanho" customModule="pizzaMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ilt-k0-MA9">
+                                <rect key="frame" x="193" y="211" width="214" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="0Ct-AD-1P7"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="chica"/>
+                                    <segment title="mediana"/>
+                                    <segment title="grande"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyW-Rp-G7b">
+                                <rect key="frame" x="268" y="351" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="cQo-4o-af2" kind="show" id="t9Y-tz-PhP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NyW-Rp-G7b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ju-g6-ROc"/>
+                            <constraint firstItem="ilt-k0-MA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7he-bX-b75"/>
+                            <constraint firstItem="NyW-Rp-G7b" firstAttribute="top" secondItem="ilt-k0-MA9" secondAttribute="bottom" constant="112" id="l5t-bf-aAm"/>
+                            <constraint firstItem="ilt-k0-MA9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="vTc-AL-ypt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tamaño" prompt="Selecciona el tamaño de tu pizza" id="E5K-FP-Dbz"/>
+                    <connections>
+                        <outlet property="tamanhoSeleccionado" destination="ilt-k0-MA9" id="AA6-1X-ZHq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="337"/>
+        </scene>
+        <!--Masa-->
+        <scene sceneID="axe-xG-HAU">
+            <objects>
+                <viewController id="cQo-4o-af2" customClass="controladorMasa" customModule="pizzaMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGD-ss-Npy"/>
+                        <viewControllerLayoutGuide type="bottom" id="zRA-zu-KIs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EsA-Lj-ZhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJH-bn-VJp">
+                                <rect key="frame" x="199" y="211" width="203" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="delgada"/>
+                                    <segment title="crujiente"/>
+                                    <segment title="gruesa"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsR-Mh-4kh">
+                                <rect key="frame" x="268" y="351" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="9MG-b7-QRF" kind="show" id="eQZ-Th-rnS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BsR-Mh-4kh" firstAttribute="centerX" secondItem="EsA-Lj-ZhZ" secondAttribute="centerX" id="f0D-W6-33i"/>
+                            <constraint firstItem="gJH-bn-VJp" firstAttribute="centerX" secondItem="EsA-Lj-ZhZ" secondAttribute="centerX" id="jtB-ip-EyY"/>
+                            <constraint firstItem="BsR-Mh-4kh" firstAttribute="top" secondItem="gJH-bn-VJp" secondAttribute="bottom" constant="112" id="msH-ce-Q7v"/>
+                            <constraint firstItem="gJH-bn-VJp" firstAttribute="top" secondItem="hGD-ss-Npy" secondAttribute="bottom" constant="117" id="x8F-QA-cnV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Masa" prompt="Selecciona el tipo de masa que deseas" id="lcc-ki-w8k"/>
+                    <connections>
+                        <outlet property="masaSeleccionada" destination="gJH-bn-VJp" id="zP8-Ks-uRE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6l-ZY-YH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714" y="337"/>
+        </scene>
+        <!--Queso-->
+        <scene sceneID="0fO-ao-qCi">
+            <objects>
+                <viewController id="9MG-b7-QRF" customClass="controladorQueso" customModule="pizzaMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Wh-oI-7Ix"/>
+                        <viewControllerLayoutGuide type="bottom" id="DLg-4C-RM0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBP-Vx-S7u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="noD-Mb-qO3">
+                                <rect key="frame" x="135" y="211" width="331" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="mozarella"/>
+                                    <segment title="cheddar"/>
+                                    <segment title="parmesano"/>
+                                    <segment title="sin queso"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6J-k5-I4M">
+                                <rect key="frame" x="268" y="351" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="Ug3-Re-q1w" kind="show" id="xbC-2n-4Gh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="noD-Mb-qO3" firstAttribute="centerX" secondItem="dBP-Vx-S7u" secondAttribute="centerX" id="0os-sm-E4w"/>
+                            <constraint firstItem="v6J-k5-I4M" firstAttribute="centerX" secondItem="dBP-Vx-S7u" secondAttribute="centerX" id="6LL-Qx-dbt"/>
+                            <constraint firstItem="v6J-k5-I4M" firstAttribute="top" secondItem="noD-Mb-qO3" secondAttribute="bottom" constant="112" id="OnQ-zQ-GUK"/>
+                            <constraint firstItem="noD-Mb-qO3" firstAttribute="top" secondItem="4Wh-oI-7Ix" secondAttribute="bottom" constant="117" id="d0b-Mf-qbf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Queso" prompt="Selecciona el tipo de queso que deseas" id="YaK-P9-hxh"/>
+                    <connections>
+                        <outlet property="quesoSeleccionado" destination="noD-Mb-qO3" id="0QA-e9-nuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yF-lz-vU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3447" y="337"/>
+        </scene>
+        <!--Ingredientes-->
+        <scene sceneID="eGQ-lD-Gbx">
+            <objects>
+                <viewController id="Ug3-Re-q1w" customClass="controladorIngredientes" customModule="pizzaMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lAM-nN-xIE"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Hn-jE-kBZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wQO-hh-NaA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RFh-28-JID">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x3K-0f-IGk">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="556"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingrediente" id="SRD-B0-alQ">
+                                                <rect key="frame" x="0.0" y="122" width="560" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRD-B0-alQ" id="bet-GR-G94">
+                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Ug3-Re-q1w" id="UD5-3v-J5C"/>
+                                            <outlet property="delegate" destination="Ug3-Re-q1w" id="pWa-Wa-fie"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KR-5Q-O0Y">
+                                        <rect key="frame" x="0.0" y="556" width="560" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RiT-W4-z3m"/>
+                                        </constraints>
+                                        <state key="normal" title="Ordenar pizza"/>
+                                        <connections>
+                                            <segue destination="6C0-xB-FLG" kind="show" id="MbO-bf-9ht"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RFh-28-JID" firstAttribute="height" secondItem="wQO-hh-NaA" secondAttribute="height" id="42z-YQ-NS7"/>
+                            <constraint firstItem="RFh-28-JID" firstAttribute="trailing" secondItem="wQO-hh-NaA" secondAttribute="trailingMargin" id="qRS-cX-IAD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RFh-28-JID" secondAttribute="bottom" id="s4l-gA-Z7U"/>
+                            <constraint firstItem="RFh-28-JID" firstAttribute="leading" secondItem="wQO-hh-NaA" secondAttribute="leadingMargin" id="sVg-yI-ta1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ingredientes" prompt="Selecciona hasta 5 ingredientes para tu pizza" id="jPp-61-HK1"/>
+                    <connections>
+                        <outlet property="botonOrdenarPizza" destination="9KR-5Q-O0Y" id="wVO-jh-Yr8"/>
+                        <outlet property="miTableView" destination="x3K-0f-IGk" id="NxY-CU-iGk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBy-f6-xAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4144" y="337"/>
+        </scene>
+        <!--Confirmación pedido-->
+        <scene sceneID="v9Q-Se-pbu">
+            <objects>
+                <viewController id="6C0-xB-FLG" customClass="controladorConfirmacion" customModule="pizzaMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fVK-Ex-XNC"/>
+                        <viewControllerLayoutGuide type="bottom" id="nu8-5v-tGW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hny-B1-5XV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VuX-Th-s4o">
+                                <rect key="frame" x="20" y="94" width="560" height="496"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-0J-iqs">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="452"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EQX-D8-Sz9">
+                                        <rect key="frame" x="0.0" y="452" width="560" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaK-I0-NGD">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                                <animations/>
+                                                <state key="normal" title="Volver a revisar"/>
+                                                <connections>
+                                                    <action selector="volverARevisar:" destination="6C0-xB-FLG" eventType="touchUpInside" id="spC-84-POM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-xi-ko5">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="44"/>
+                                                <animations/>
+                                                <state key="normal" title="Realizar pedido"/>
+                                                <connections>
+                                                    <action selector="Realizarpedido:" destination="6C0-xB-FLG" eventType="touchUpInside" id="kBY-fN-Eqz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="rSh-bq-XCJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VuX-Th-s4o" firstAttribute="centerX" secondItem="hny-B1-5XV" secondAttribute="centerX" id="JCb-t0-uCv"/>
+                            <constraint firstItem="VuX-Th-s4o" firstAttribute="leading" secondItem="hny-B1-5XV" secondAttribute="leadingMargin" id="LKb-Zg-JCQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VuX-Th-s4o" secondAttribute="trailing" id="TBg-Rc-sHL"/>
+                            <constraint firstItem="VuX-Th-s4o" firstAttribute="top" secondItem="fVK-Ex-XNC" secondAttribute="bottom" id="ciD-tI-d6G"/>
+                            <constraint firstItem="nu8-5v-tGW" firstAttribute="top" secondItem="VuX-Th-s4o" secondAttribute="bottom" constant="10" id="rYa-jp-GG0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Confirmación pedido" prompt="Revise su pizza" id="6BA-My-6ww">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gOI-JS-UZ3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="campoDescripcionPizza" destination="7q5-0J-iqs" id="r3v-mU-A7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRv-x1-7RY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4818" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Uy-86-fHv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="12G-iN-Bhc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cWH-jz-ic9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uvd-w9-SaH" kind="relationship" relationship="rootViewController" id="HVN-DO-7LA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nta-ql-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CVO-LM-ddD">
+            <objects>
+                <viewController id="uvd-w9-SaH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dm4-np-Nrx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QBo-cD-fTK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k9x-No-qCf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zaf-D5-t1o">
+                                <rect key="frame" x="20" y="69" width="560" height="526"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Crea tu propia pizza!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sg5-Ta-5Nb">
+                                        <rect key="frame" x="188" y="0.0" width="185" height="35"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-cU-Xg9">
+                                        <rect key="frame" x="130" y="35" width="300" height="441"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNU-qS-8Pq">
+                                        <rect key="frame" x="227" y="476" width="106" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Empecemos!"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="msG-gY-uBB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QBo-cD-fTK" firstAttribute="top" secondItem="zaf-D5-t1o" secondAttribute="bottom" constant="5" id="4AI-TS-F5L"/>
+                            <constraint firstItem="zaf-D5-t1o" firstAttribute="top" secondItem="dm4-np-Nrx" secondAttribute="bottom" constant="5" id="PZ8-U0-EYo"/>
+                            <constraint firstItem="zaf-D5-t1o" firstAttribute="leading" secondItem="k9x-No-qCf" secondAttribute="leadingMargin" id="ZNc-TT-tkI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zaf-D5-t1o" secondAttribute="trailing" id="xfR-lE-Ogh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xdx-Rs-Lzz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9D-kq-Xfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza" width="300" height="300"/>
+    </resources>
+</document>
